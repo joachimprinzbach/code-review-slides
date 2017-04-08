@@ -7,6 +7,7 @@
 @import "../template/settings";
 // ---------------------------------------------
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600);
+@import url(http://fonts.googleapis.com/css?family=Pacifico:300,400,800,700,600);
 
 $mainFont: 'Open Sans', sans-serif;
 $mainFontSize: 36px;
@@ -85,37 +86,36 @@ img {
       padding: 0.4em !important;
       max-height: none !important;
     }
-
-    .keyword {
-      color: #B38335;
-    }
-
-    .tag, .literal,
-    .apache .tag {
-      color: #3B7586;
-    }
-
-    .variable {
-      color: #666;
-    }
-
-    .string {
-      color: #B66666;
-    }
-    .title {
-      color: #3B7586;
-    }
   }
 
-  .bv-slide {
-    img {
-      opacity: 0.4;
-
-      &:first-child {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
+  .sub-section-slide {
+    h1 {
+      font-size: 4.1em;
+      color: #83b81a;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 1.5em;
+      font-family: 'Pacifico', Helvetica, sans-serif;
+      text-align: center;
+    }
+    h2:before,
+    h2:after {
+      background-color: #646665;
+      content: "";
+      display: inline-block;
+      height: 2px;
+      position: relative;
+      vertical-align: middle;
+      width: 25%;
+    }
+    h2:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    h2:after {
+      left: 0.5em;
+      margin-right: -50%;
     }
   }
 
@@ -128,9 +128,9 @@ img {
     }
 
     h1 {
-      font-size: 2.1em;
+      font-size: 3.1em;
       position: relative;
-      margin-top: 4em;
+      margin-top: 3.5em;
 
       &:before {
         position: absolute;
@@ -147,7 +147,7 @@ img {
 
     h3 {
       margin-top: 0.5em;
-      font-size: 1.1em;
+      font-size: 1.6em;
       text-indent: 0.1em;
       // text-transform: uppercase;
       line-height: 1.3em;

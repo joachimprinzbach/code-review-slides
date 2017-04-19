@@ -32,7 +32,7 @@
             <h2>Über uns</h2>
             <div>
                 <div class="about">
-                    <img class="profile" width="250" height="250" alt="Marius" src="../img/marius.jpg">
+                    <img class="profile" width="250" height="250" alt="Marius" src="../img/marius.png">
                     <h3>Marius Reusch</h3>
                     <h3><a href="">Software Engineer @ Zühlke</a></h3>
                     <img height="90px" src="../img/zuehlke.png">
@@ -102,6 +102,175 @@
                 </ul>
             </section>
         </section>
+        <section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Testing Allgemein</h1>
+            </section>
+            <section>
+                <h3>Warum Testing? / Warum Automatisierung?</h3>
+            </section>
+            <section>
+                <h3>Testing Pyramide</h3>
+            </section>
+            <section>
+                <h3>Testing Pyramide (Theorie)</h3>
+                <ul>
+                    <li>Testarten (unit, integration e2e ...)</li>
+                </ul>
+            </section>
+            <section>
+                <h3>JUnit / Testrunner</h3>
+            </section>
+            <section>
+                <h3>Was ist TDD?</h3>
+                <ul>
+                    <li>Test First</li>
+                    <li>Hohe Automatisierung</li>
+                    <li>Kurze Feedback Loop</li>
+                </ul>
+            </section>
+
+
+        </section>
+        <section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Projekt Setup</h1>
+            </section>
+            <section>
+                <h3>Auschecken und dummyTest ausführen (Bild einfügen)</h3>
+            </section>
+            <section>
+                <h3>Maven Projekt Struktur</h3>
+                <p>Industrieweiter Standard</p>
+                <ul>
+                    <li>src/main/java</li>
+                    <li>src/test/java</li>
+                    <li>Name der Testklasse = Zu testende Klasse + "Test"</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Dependencies</h3>
+                <ul>
+                    <li>junit</li>
+                    <li>mockito</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Failure / Success</h3>
+                <h4>Rot und Grün - was bedeutet das?</h4>
+            </section>
+            <section>
+                <h3>@Test</h3>
+                <ul>
+                    <li>frühere Version: alles muss mit test beginnen</li>
+                    <li>was macht die Annotation, was passiert pro Test</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Assert</h3>
+                <ul>
+                    <li>überprüfen der erwartungen</li>
+                    <li>ist eine erwartung nicht korrekt schlägt ein test fehl</li>
+                    <li>assertEquals(expected, actual)</li>
+                    <li>assertEquals(message, expected, actual)</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Ausführen von Tests</h3>
+                <ul>
+                    <li>mehrere Tests ausführen</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>TDD</h1>
+            </section>
+            <section>
+                <h3>Ursprung</h3>
+                <ul>
+                    <li>Warum?</li>
+                    <li>xTreme Programming</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Vereinfachter TDD Cycle ohne Refactoring</h3>
+            </section>
+            <section>
+                <h3>Beginne so simpel wie möglich</h3>
+            </section>
+        </section>
+
+        <section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Projektvorstellung</h1>
+                <h2><span></span>Grade Calculator<span></span></h2>
+            </section>
+            <section>
+                <h3>1. Anforderung</h3>
+                <ul>
+                    <li>Der Calculator erhält eine Note und soll den Durchschnitt dieser Note berechnen.</li>
+                    <li>Überprüfe die Vermutungen mit einer Assertion</li>
+                    <li>Überlege dir einen sinnvollen Namen für die Testmethode(n)</li>
+                </ul>
+            </section>
+            <section>
+                <h3>1. Anforderung (Recap)</h3>
+                <ul>
+                    <li>Wieviel Tests habt ihr geschrieben?</li>
+                    <li>Warum?</li>
+                </ul>
+            </section>
+            <section>
+                <h3>2. Anforderung</h3>
+                <ul>
+                    <li>Der Calculator erhält zwei Noten und soll den Durchschnitt dieser Noten berechnen.</li>
+                    <li>Überprüfe die Vermutungen mit einer Assertion</li>
+                    <li>Überlege dir erneut einen sinnvollen Namen für die Testmethode und bedenke / überarbeite die
+                        Namen der vorhandenen Testmethoden
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>2. Anforderung (Recap)</h3>
+                <ul>
+                    <li>Wie sind eure Tests innerhalb der Methoden strukturiert? Wieiviel asserts habt ihr in einer Testmethode?</li>
+                    <li>Exkurs: Naming Patterns und Strukturen für Testmethoden</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Exkurs: Naming Patterns und Strukturen für Testmethoden</h3>
+                <h4>Welches Pattern findet ihr am sinnvollsten?</h4>
+                <ul>
+                    <li>testCalc1</li>
+                    <li>oneGrade_calculateAverage_returnsInputGrade</li>
+                    <li>calculateAverageOfOneGrade</li>
+                    <li>testAverageCalculationForOneGradeAndShouldReturnTheAverageOfThatGrade</li>
+                    <li>TODO: research</li>
+                    <li>...</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Exkurs: Naming Patterns und Strukturen für Testmethoden</h3>
+                <ul>
+                    <li>AAA: Arrange Act Assert</li>
+                    <li>Given When Then</li>
+                    <li>Osherov</li>
+                    <li>...</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Exkurs: Test Coverage</h3>
+                <p>Versuche die Berechnungslogik zu zerstören, ohne dass ein Test bricht.</p>
+            </section>
+            <section>
+                <h3>Exkurs: Test Coverage</h3>
+                <p>Hier noch Theorie</p>
+            </section>
+
+        </section>
+
     </div>
 </div>
 

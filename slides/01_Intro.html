@@ -202,7 +202,7 @@
                 <ul>
                     <li>Nutze ggf. sogar statische Werte</li>
                     <li>Schreibe keinen Code für Anforderungen, die irgendwann mal auftauch könnten</li>
-                    <li>Löse dich davon die Implementation vorauszuahnen</li>
+                    <li>Löse dich davon, die Implementation vorauszuahnen</li>
                     <li>In erster Linie geht es darum den Test grün zu bekommen (red / green cycle)</li>
                 </ul>
             </section>
@@ -216,23 +216,40 @@
             <section>
                 <h3>1. Anforderung</h3>
                 <ul>
-                    <li>Der Calculator erhält eine Note und soll den Durchschnitt dieser Note berechnen.</li>
-                    <li>Überprüfe die Vermutungen mit einer Assertion</li>
-                    <li>Überlege dir einen sinnvollen Namen für die Testmethode(n)</li>
+                    <li>Der Calculator erhält eine beliebige ganzzahlige Note als Parameter und soll den <span
+                            class="code">Durchschnitt dieser Note</span>
+                        berechnen.
+                    </li>
+                    <li>Überlege dir einen sinnvollen Namen für die Testmethode(n), starte mit möglichst einfachen
+                        Testfällen
+                    </li>
                 </ul>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        @Test
+                        public void sinnvollerName() throws Exception {
+                            final Person person = new Person("Hans", "Muster");
+
+                            final String fullname = person.getFullname();
+
+                            Assert.assertEquals("Hans Muster", fullname);
+                        }
+					</code>
+                </pre>
             </section>
             <section>
                 <h3>1. Anforderung (Recap)</h3>
                 <ul>
                     <li>Wieviel Tests habt ihr geschrieben?</li>
                     <li>Warum?</li>
+                    <li>TDD Fanatiker Beispiel</li>
                 </ul>
             </section>
             <section>
                 <h3>2. Anforderung</h3>
                 <ul>
                     <li>Der Calculator erhält zwei Noten und soll den Durchschnitt dieser Noten berechnen.</li>
-                    <li>Überprüfe die Vermutungen mit einer Assertion</li>
+                    <li>Überprüfe die Anforderung mit geeigneten Testfällen</li>
                     <li>Überlege dir erneut einen sinnvollen Namen für die Testmethode(n) und bedenke / überarbeite die
                         Namen der vorhandenen Testmethoden
                     </li>
@@ -241,15 +258,15 @@
             <section>
                 <h3>2. Anforderung (Recap)</h3>
                 <ul>
-                    <li>Wie sind eure Tests innerhalb der Methoden strukturiert? Wieiviel asserts habt ihr in einer
-                        Testmethode?
+                    <li>Wieiviele <span class="code">Assert Statements</span> habt ihr in einer Testmethode?
                     </li>
-                    <li>Exkurs: Naming Patterns und Strukturen für Testmethoden</li>
+                    <li>Wie sind Beispiele für eure Testnamen?</li>
+                    <li>Exkurs: Naming Patterns für Testmethoden</li>
                 </ul>
             </section>
             <section>
-                <h3>Exkurs: Naming Patterns und Strukturen für Testmethoden</h3>
-                <h4>Welches Pattern findet ihr am sinnvollsten?</h4>
+                <h3>Exkurs: Naming Patterns für Testmethoden</h3>
+                <h4>Welches Naming findet ihr am sinnvollsten?</h4>
                 <ul>
                     <li>testCalc1</li>
                     <li>oneGrade_calculateAverage_returnsInputGrade</li>
@@ -262,11 +279,21 @@
             <section>
                 <h3>Exkurs: Naming Patterns und Strukturen für Testmethoden</h3>
                 <ul>
-                    <li>AAA: Arrange Act Assert</li>
-                    <li>Given When Then</li>
-                    <li>Osherov</li>
-                    <li>...</li>
+                    <li><a href="http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html">Roy Osherove</a></li>
+                    <li><span class="code">methodUnderTest_inputParams_expectedResult</span></li>
                 </ul>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        @Test
+                        public void getFullName_firstLastName_fullName() {
+                            final Person person = new Person("Hans", "Muster");
+
+                            final String fullname = person.getFullname();
+
+                            Assert.assertEquals("Hans Muster", fullname);
+                        }
+					</code>
+                </pre>
             </section>
             <section>
                 <h3>3. Anforderung</h3>
@@ -293,10 +320,14 @@
             <section>
                 <h3>4. Anforderung</h3>
                 <ul>
-                    <li>Es dürfen nur gültige Noten die an der HFU bekkant sind in den Rechner reingegeben werden.</li>
-                    <li>Wenn eine ungültige Note erzeugt wird soll eine IllegalArgumentException geworfen werden.</li>
-                    <li>Für heute gehen wir davon dass Noten dann gültig sind wenn sie >= 1.0 und kleiner gleich 5.0 sind</li>
-                    <li>@Test(expected = IllegalArgumentException.class)</li>
+                    <li>Es dürfen nur gültige Noten die an der HFU bekannt sind in den Rechner reingegeben werden.</li>
+                    <li>Wenn eine ungültige Note erzeugt wird soll eine <span
+                            class="code">IllegalArgumentException</span> geworfen werden.
+                    </li>
+                    <li>Für heute gehen wir davon aus, dass Noten dann gültig sind wenn sie >= 1.0 und kleiner gleich
+                        5.0 sind
+                    </li>
+                    <li><span class="code">@Test(expected = IllegalArgumentException.class)</span></li>
                     <li>Überprüfe die Vermutungen mit einer Assertion</li>
                 </ul>
             </section>
@@ -306,7 +337,43 @@
                     <li></li>
                 </ul>
             </section>
-
+            <section>
+                <h3>5. Anforderung - eine gewichtete Note</h3>
+                <ul>
+                    <li>Erstelle einen Test der den Durchschnitt für eine <span class="warn">Note (2.0)</span> mit deren
+                        <Gspan class="warn">Gewicht (6 ECTS)</Gspan>
+                        berechnet
+                    </li>
+                    <li>Löse die Anforderung so einfach wie möglich</li>
+                </ul>
+            </section>
+            <section>
+                <h3>5. Anforderung (Recap)</h3>
+                <ul>
+                    <li>code snippet</li>
+                </ul>
+            </section>
+            <section>
+                <h3>6. Anforderunge - mehrere gewichtete Noten</h3>
+                <ul>
+                    <li>Erstelle einen Test der den Durchschnitt für mehrere Noten berechnet</li>
+                    <li>Eine Note 2.7 mit 3 ECTS und eine Note 1.3 mit 6 ECTS</li>
+                    <li><span class="warn">Hint:</span> Mache dir Gedanken über potentielle Objekte</li>
+                </ul>
+            </section>
+            <section>
+                <h3>6. Anforderung (Recap)</h3>
+                <ul>
+                    <li>Objekte... Primitive Obsession...</li>
+                </ul>
+            </section>
+            <section>
+                <h3>7. Anforderung</h3>
+                <ul>
+                    <li>Stelle sicher, dass nur ganzzahlige Credit Points zwischen 1 und 60 ausgewählt werden können
+                    </li>
+                </ul>
+            </section>
 
             <section>
                 <h3>Exkurs: Test Coverage</h3>

@@ -123,17 +123,30 @@
             <section>
                 <h3>Testing Pyramide (Theorie)</h3>
                 <ul>
-                    <li><span class="warn">Integration Tests</span> werden in</li>
-                    <li><span class="warn">UI Tests</span> werden in</li>
-                    <li><span class="warn">E2E Tests</span> werden in</li>
-                    <li><span class="warn">Manual Tests</span> werden in</li>
+                    <li><span class="warn">Integration Tests</span> testen das Zusammenspiel mehrerer Teile und externer Ressourcen (z.B. Datenbank)</li>
+                    <li><span class="warn">UI Tests</span> testen den View Layer, werden nicht mit dem realen Backend ausgeführt </li>
+                    <li><span class="warn">E2E Tests</span> testen die Applikation vom UI bis zur Datenbank, in einem Benutzer-Flow</li>
+                    <li><span class="warn">Manual Tests</span> werden von Testern oder Benutzern manuell durchgeführt</li>
                 </ul>
             </section>
             <section>
-                <h3>Unit Testing</h3>
+                <h3>Unit Tests</h3>
+                <ul>
+                    <li>testen eine Unit of Work: eine Klasse, oder auch mehrere Klassen als Verbund</li>
+                    <li>sind sehr schnell und automatisch ausführbar - werden vor jedem Commit ausgeführt</li>
+                    <li>werden rein in memory ausgeführt, kein Zugriff auf Dateisystem oder Datenbank</li>
+                    <li>werden von den Entwicklern mit den gewohnten Tools (und einer Unit-Testing Library) geschrieben</li>
+                </ul>
             </section>
             <section>
-                <h3>JUnit / Testrunner</h3>
+                <h3>JUnit</h3>
+                <ul>
+                    <li>JUnit ist ein Unit-Test Framework</li>
+                    <li>ursprünglich von Kent Beck und Erich Gamma entwickelt</li>
+                    <li>bietet eine API zum Annotieren von Tests: <span class="code">@Test</span></li>
+                    <li>bietet statische Methoden um die Ergebnisse mit den Erwartungen zu überprüfen: <span class="code">org.junit.Assert.*</span></li>
+                    <li>ist Open Source und kostenlos verfügbar: <a href="http://junit.org/junit4/">JUnit Projektseite</a></li>
+                </ul>
             </section>
             <section>
                 <h3>Was ist TDD?</h3>

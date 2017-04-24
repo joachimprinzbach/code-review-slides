@@ -225,8 +225,11 @@
                 </ul>
             </section>
             <section>
-                <h3>Failure / Success</h3>
-                <h4>Rot und Grün - was bedeutet das?</h4>
+                <h3>Failure / Success / Error</h3>
+                <ul>
+                    <li><span class="code">Grün</span> bedeutet, dass die Testfälle funktionieren, <span class="code">keine unerwarteten Exceptions</span> auftreten und alle <span class="code">Assertions den Erwartungen entsprechen</span></li>
+                    <li><span class="warn">Rot</span> bedeutet, dass entweder eine <span class="warn">unerwartete Exception</span> aufgetreten ist (Error) oder eine <span class="warn">Assertion nicht den Erwartungen entspricht</span> (Failure)</li>
+                </ul>
             </section>
             <section>
                 <h3>@Test</h3>

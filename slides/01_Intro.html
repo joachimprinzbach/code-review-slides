@@ -234,8 +234,9 @@
             <section>
                 <h3>@Test</h3>
                 <ul>
-                    <li>frühere Version: alles muss mit test beginnen</li>
-                    <li>was macht die Annotation, was passiert pro Test</li>
+                    <li>frühere Version: alle Methoden mussten mit test beginnen, die Testklasse musste <span class="code">TestCase</span> erweitern</li>
+                    <li>seit JUnit4 werden Test-Methoden mit der <span class="code">@Test</span> Annotation versehen, es muss nicht mehr von <span class="code">TestCase</span> geerbt werden</li>
+                    <li>die mit <span class="code">@Test</span> annotierten Methoden müssen <span class="code">public void</span> sein</li>
                 </ul>
             </section>
             <section>

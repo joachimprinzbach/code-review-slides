@@ -540,9 +540,95 @@
                     <li>vor allem Abhängigkeiten, die von der zu testenden Klasse selbst erstellt werden</li>
                 </ul>
             </section>
+
             <section>
                 <p><span class="quote">"Dependency Injection is a 25-dollar term for a 5-cent concept."</span></p>
                 <p><span class="author">James Shore</span></p>
+            </section>
+
+            <section>
+                <p><span class="quote">"Dependency injection means giving an object its instance variables. Really. That's it."</span></p>
+                <p><span class="author">James Shore</span></p>
+            </section>
+
+            <section>
+                <h2>Constructor Injection</h2>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        public class SomeClass {
+                            private Dependency dependency;
+                            public SomeClass(Dependency dependency) {
+                                this.dependency = dependency;
+                            }
+                        }
+					</code>
+                    <code class="hljs java" data-trim contenteditable>
+                        Dependecy dependency = new Dependency();
+                        SomeClass clazz = new SomeClass(dependency);
+					</code>
+                </pre>
+            </section>
+            <section>
+                <h2>Setter Injection</h2>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        public class SomeClass {
+                            private Dependency dependency;
+                            public void setDependency(Dependency dependency) {
+                                this.dependency = dependency;
+                            }
+                        }
+					</code>
+                    <code class="hljs java" data-trim contenteditable>
+                        Dependecy dependency = new Dependency();
+                        SomeClass clazz = new SomeClass();
+                        clazz.setDependency(dependency);
+					</code>
+                </pre>
+            </section>
+            <section>
+                <h2>Interface Injection</h2>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        public class SomeClass implements DepInjectable{
+                            private Dependency dependency;
+                            @Override
+                            public void injectDep(Dependency dependency) {
+                                this.dependency = dependency;
+                            }
+                        }
+
+                        interface DepInjectable {
+                            void injectDep(Dependency dependency);
+                        }
+					</code>
+                    <code class="hljs java" data-trim contenteditable>
+                        Dependecy dependency = new Dependency();
+                        SomeClass clazz = new SomeClass();
+                        clazz.setDependency(dependency);
+					</code>
+                </pre>
+            </section>
+            <section>
+                <h2>JEE CDI & Spring DI</h2>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        public class SomeClass {
+                            @Inject
+                            private Dependency dependency;
+                        }
+					</code>
+                    <code class="hljs java" data-trim contenteditable>
+                        public class SomeClass {
+                            private Dependency dependency;
+
+                            @Autowired
+                            public void setDependency(Dependency dependency) {
+                                this.dependency = dependency;
+                            }
+                        }
+					</code>
+                </pre>
             </section>
         </section>
 

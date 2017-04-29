@@ -130,10 +130,17 @@
             <section>
                 <h3>Testing Pyramide (Theorie)</h3>
                 <ul>
-                    <li><span class="warn">Integration Tests</span> testen das Zusammenspiel mehrerer Teile und externer Ressourcen (z.B. Datenbank)</li>
-                    <li><span class="warn">UI Tests</span> testen den View Layer, werden nicht mit dem realen Backend ausgeführt </li>
-                    <li><span class="warn">E2E Tests</span> testen die Applikation vom UI bis zur Datenbank, in einem Benutzer-Flow</li>
-                    <li><span class="warn">Manual Tests</span> werden von Testern oder Benutzern manuell durchgeführt</li>
+                    <li><span class="warn">Integration Tests</span> testen das Zusammenspiel mehrerer Teile und externer
+                        Ressourcen (z.B. Datenbank)
+                    </li>
+                    <li><span class="warn">UI Tests</span> testen den View Layer, werden nicht mit dem realen Backend
+                        ausgeführt
+                    </li>
+                    <li><span class="warn">E2E Tests</span> testen die Applikation vom UI bis zur Datenbank, in einem
+                        Benutzer-Flow
+                    </li>
+                    <li><span class="warn">Manual Tests</span> werden von Testern oder Benutzern manuell durchgeführt
+                    </li>
                 </ul>
             </section>
             <section>
@@ -142,7 +149,9 @@
                     <li>testen eine Unit of Work: eine Klasse, oder auch mehrere Klassen als Verbund</li>
                     <li>sind sehr schnell und automatisch ausführbar - werden vor jedem Commit ausgeführt</li>
                     <li>werden rein in memory ausgeführt, kein Zugriff auf Dateisystem oder Datenbank</li>
-                    <li>werden von den Entwicklern mit den gewohnten Tools (und einer Unit-Testing Library) geschrieben</li>
+                    <li>werden von den Entwicklern mit den gewohnten Tools (und einer Unit-Testing Library)
+                        geschrieben
+                    </li>
                 </ul>
             </section>
             <section>
@@ -151,8 +160,10 @@
                     <li>JUnit ist ein Unit-Test Framework</li>
                     <li>ursprünglich von Kent Beck und Erich Gamma entwickelt</li>
                     <li>bietet eine API zum Annotieren von Tests: <span class="code">@Test</span></li>
-                    <li>bietet statische Methoden um die Ergebnisse mit den Erwartungen zu überprüfen: <span class="code">org.junit.Assert.*</span></li>
-                    <li>ist Open Source und kostenlos verfügbar: <a href="http://junit.org/junit4/">JUnit Projektseite</a></li>
+                    <li>bietet statische Methoden um die Ergebnisse mit den Erwartungen zu überprüfen: <span
+                            class="code">org.junit.Assert.*</span></li>
+                    <li>ist Open Source und kostenlos verfügbar: <a href="http://junit.org/junit4/">JUnit
+                        Projektseite</a></li>
                 </ul>
             </section>
         </section>
@@ -163,17 +174,48 @@
             </section>
             <section>
                 <h3>Ursprung</h3>
-                <ul>
-                    <li>xTreme Programming</li>
-                </ul>
+                <div style="display: flex;">
+                    <div style="flex: 1;">
+                        <img height="250" src="../img/kentbeck.jpg">
+                        <div>Kent Beck</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <img height="250" src="../img/agile.jpg">
+                        <div>Agile Movement</div>
+                    </div>
             </section>
             <section>
-                <h3>Warum TDD?</h3>
-                <ul>
-                    <li>Schnelles Feedback</li>
-                    <li>Du kannst keinen schwer testbaren Code schreiben, weil du die Tests zuerst schreibst.</li>
-                    <li>It's fun!</li>
-                </ul>
+                <h3>Was ist die grundlegende Vorgehensweise bei TDD?</h3>
+            </section>
+            <section>
+                <h3>Write tests first!</h3>
+            </section>
+            <section>
+                <img src="../img/whaaat.gif">
+            </section>
+            <section>
+                <h3>Aber ich habe doch noch gar keine Klassen oder Methoden oder sonst irgendwas. Arbeite ich mit diesen
+                    ganzen rot unterstrichenen Sachen in meiner IDE?</h3>
+            </section>
+            <section>
+                <img src="../img/yes2.gif">
+            </section>
+            <section>
+                <h3>Und warum mache ich sowas?</h3>
+                <div style="display: flex;">
+                    <div style="flex: 1;">
+                        <img height="160" src="../img/fastfeedback.png">
+                        <div>Fast Feedback</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <img height="160" src="../img/CodeIsBad.png">
+                        <div>No bad code</div>
+                    </div>
+                    <div style="flex: 1">
+                        <img height="160" src="../img/havingfun.jpg">
+                        <div>It's fun!</div>
+                    </div>
+                </div>
             </section>
             <section>
                 <h3>Vereinfachter TDD Cycle</h3>
@@ -220,22 +262,34 @@
                 <h3>Dependencies</h3>
                 <ul>
                     <li><span class="code">JUnit</span></li>
-                    <li><span class="code">Mockito</span> - Framework um Abhängigkeiten durch eine Mock Implementation zu ersetzen</li>
+                    <li><span class="code">Mockito</span> - Framework um Abhängigkeiten durch eine Mock Implementation
+                        zu ersetzen
+                    </li>
                 </ul>
             </section>
             <section>
                 <h3>Failure / Success / Error</h3>
                 <ul>
-                    <li><span class="code">Grün</span> bedeutet, dass die Testfälle funktionieren, <span class="code">keine unerwarteten Exceptions</span> auftreten und alle <span class="code">Assertions den Erwartungen entsprechen</span></li>
-                    <li><span class="warn">Rot</span> bedeutet, dass entweder eine <span class="warn">unerwartete Exception</span> aufgetreten ist (Error) oder eine <span class="warn">Assertion nicht den Erwartungen entspricht</span> (Failure)</li>
+                    <li><span class="code">Grün</span> bedeutet, dass die Testfälle funktionieren, <span class="code">keine unerwarteten Exceptions</span>
+                        auftreten und alle <span class="code">Assertions den Erwartungen entsprechen</span></li>
+                    <li><span class="warn">Rot</span> bedeutet, dass entweder eine <span class="warn">unerwartete Exception</span>
+                        aufgetreten ist (Error) oder eine <span
+                                class="warn">Assertion nicht den Erwartungen entspricht</span> (Failure)
+                    </li>
                 </ul>
             </section>
             <section>
                 <h3>@Test</h3>
                 <ul>
-                    <li>frühere Version: alle Methoden mussten mit test beginnen, die Testklasse musste <span class="code">TestCase</span> erweitern</li>
-                    <li>seit JUnit4 werden Test-Methoden mit der <span class="code">@Test</span> Annotation versehen, es muss nicht mehr von <span class="code">TestCase</span> geerbt werden</li>
-                    <li>die mit <span class="code">@Test</span> annotierten Methoden müssen <span class="code">public void</span> sein</li>
+                    <li>frühere Version: alle Methoden mussten mit test beginnen, die Testklasse musste <span
+                            class="code">TestCase</span> erweitern
+                    </li>
+                    <li>seit JUnit4 werden Test-Methoden mit der <span class="code">@Test</span> Annotation versehen, es
+                        muss nicht mehr von <span class="code">TestCase</span> geerbt werden
+                    </li>
+                    <li>die mit <span class="code">@Test</span> annotierten Methoden müssen <span class="code">public void</span>
+                        sein
+                    </li>
                 </ul>
             </section>
             <section>
@@ -461,14 +515,26 @@
 
         <section>
             <section class="sub-section-slide" data-background="#E5F3F9">
-                <h1>Testbarer Code</h1>
+                <h1>(Un-) Testbarer Code</h1>
                 <h2><span></span>Der Umgang mit Dependencies<span></span></h2>
             </section>
+
+            <section>
+                <h2>Untestable Code</h2>
+                <ul>
+                    <li>"And if your static utility methods can call to external services as well, that’s even
+                        better!"
+                    </li>
+                    <li><a href="http://misko.hevery.com/2008/07/24/how-to-write-3v1l-untestable-code/">How To Write
+                        3v1l, untestable Code</a></li>
+                </ul>
+            </section>
+
             <section>
                 <h2>Dependencies</h2>
                 <ul>
                     <li>Abhängigkeiten sind die Hauptursache für schwer testbaren Code</li>
-                    <li>wie schreibt </li>
+                    <li>wie schreibt</li>
                 </ul>
             </section>
         </section>
@@ -490,27 +556,36 @@
                 <ul>
                     <li><a href="https://www.codewars.com/users/sign_in">Codewars</a></li>
                     <li><a href="https://de.udacity.com/">Udacity</a></li>
-                    <li><a href="http://www.frankwestphal.de/ftp/Westphal_Testgetriebene_Entwicklung.pdf">Frank Westphal - Testgetriebene Entwicklung</a></li>
-                    <li><a href="https://martinfowler.com/bliki/ParallelChange.html">Danilo Sato - Parallel Change (martinfowler.com/)</a></li>
+                    <li><a href="http://www.frankwestphal.de/ftp/Westphal_Testgetriebene_Entwicklung.pdf">Frank Westphal
+                        - Testgetriebene Entwicklung</a></li>
+                    <li><a href="https://martinfowler.com/bliki/ParallelChange.html">Danilo Sato - Parallel Change
+                        (martinfowler.com/)</a></li>
                     <li><a href="https://sourcemaking.com/refactoring">Code Smells and Refactoring Techniques</a></li>
                 </ul>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Gute Quellen zum Nachschlagen / Ausprobieren (2/2)</h3>
                 <ul>
-                    <li><a href="https://www.thoughtworks.com/de/insights/blog/composition-vs-inheritance-how-choose">Composition vs. Inheritance</a></li>
-                    <li><a href="http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html">Naming Standard for Unit Tests nach Osherove</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=qkblc5WRn-U">Rober C. Marting - Three laws of TDD</a></li>
-                    <li><a href="http://misko.hevery.com/2008/07/24/how-to-write-3v1l-untestable-code/">How to Write 3v1L, Untestable Code</a></li>
+                    <li><a href="https://www.thoughtworks.com/de/insights/blog/composition-vs-inheritance-how-choose">Composition
+                        vs. Inheritance</a></li>
+                    <li><a href="http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html">Naming Standard
+                        for Unit Tests nach Osherove</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=qkblc5WRn-U">Rober C. Marting - Three laws of TDD</a>
+                    </li>
+                    <li><a href="http://misko.hevery.com/2008/07/24/how-to-write-3v1l-untestable-code/">How to Write
+                        3v1L, Untestable Code</a></li>
                 </ul>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Literatur Empfehlungen</h3>
                 <ul>
-                    <li>Frank Westphal: <span class="hightlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span></li>
+                    <li>Frank Westphal: <span class="hightlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span>
+                    </li>
                     <li>Kent Beck: <span class="hightlighted">"Test Driven Development: By Example"</span></li>
-                    <li>Robert C. Martin: <span class="hightlighted">"Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code"</span></li>
-                    <li>Eric Evans: <span class="hightlighted">"Domain-Driven Design: Tackling Complexity in the Heart of Software"</span></li>
+                    <li>Robert C. Martin: <span class="hightlighted">"Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code"</span>
+                    </li>
+                    <li>Eric Evans: <span class="hightlighted">"Domain-Driven Design: Tackling Complexity in the Heart of Software"</span>
+                    </li>
                 </ul>
             </section>
         </section>

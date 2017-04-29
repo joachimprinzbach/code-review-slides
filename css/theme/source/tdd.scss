@@ -91,7 +91,7 @@ img {
   .sub-section-slide {
     h1 {
       font-size: 4em;
-      color: #83b81a;
+      color: $linkColor;
       text-transform: uppercase;
     }
     h2 {
@@ -201,6 +201,19 @@ img {
   .hightlighted {
     color: #83b81a;
   }
+
+  .quote {
+    font-size: 2.5em;
+    font-family: 'Pacifico', Helvetica, sans-serif;
+    text-align: center;
+    color: $headingColor;
+  }
+
+  .author {
+    font-style: italic;
+    font-size: 1.7em;
+  }
+
   .code {
     background: rgba(236, 239, 241, 0.56);
     border-radius: 2px;

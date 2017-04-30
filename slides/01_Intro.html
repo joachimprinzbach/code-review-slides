@@ -700,6 +700,37 @@
                     <li>die reale Implemementation wird überschrieben</li>
                 </ul>
             </section>
+            <section>
+                <h2>Test Spy</h2>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        new EmailService() {
+                            int callCount = 0;
+                            String lastCallParam = null;
+
+                            @Override
+                            public void sendMail(String msg) {
+                                this.callCount++;
+                                this.lastCallParam = msg;
+                            }
+                            public int getCallCount() {
+                                return this.callCount;
+                            }
+                            public String getLastCallParam() {
+                                return this.lastCallParam;
+                            }
+                        };
+					</code>
+                </pre>
+            </section>
+            <section>
+                <h2>Test Spy (2)</h2>
+                <ul>
+                    <li>ist ein Stub der zusätzliche Informationen über die Aufrufe bereitstellt</li>
+                    <li>er kann auch die reale Implementierung aufrufen <span class="code">super.call();</span></li>
+                    <li>die Anzahl der Aufrufe, ob eine Methode überhaupt aufgerufen wurde oder auch die Argumente können überprüft werden</li>
+                </ul>
+            </section>
         </section>
 
         <section>

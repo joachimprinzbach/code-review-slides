@@ -742,6 +742,41 @@
             </section>
             <section>
                 <h2>Mock</h2>
+                <ul>
+                    <li>ist der mächtigste Vertreter der Test Doubles</li>
+                    <li>es wird definiert, was beim Aufruf von Methoden zurückgegeben werden soll</li>
+                    <li>es kann eine Vielzahl von Überprüfungen auf dem Mock vorgenommen werden</li>
+                    <li>Für das Mocking ist ein Framework notwendig</li>
+                    <li>Für Java gibt es <a href="http://site.mockito.org/">Mockito</a>, <a href="http://easymock.org/">EasyMock</a>,
+                        <a href="http://jmockit.org/">JMockit</a> und <a href="http://powermock.github.io/">PowerMock</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Mockito</h2>
+                <ul>
+                    <li>ist in der Industrie am verbreitesten</li>
+                    <li>hat aus unserer Sicht die angenehmste API</li>
+                    <li>wir raten beim Einsatz eines Mocking-Frameworks für Java zu Mockito</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Mocking mit Mockito</h2>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        @Test
+                        public void email_withMockito() throws Exception {
+                            EmailService emailServiceMock = Mockito
+                                .mock(EmailService.class);
+                            Mockito.when(emailServiceMock.sendMail("Text"))
+                                .thenReturn("Antwort");
+
+                            String resp = emailServiceMock.sendMail("Text");
+
+                            Assert.assertEquals("Antwort", resp);
+                            Mockito.verify(emailServiceMock, Mockito.times(1));
+                        }
+					</code>
+                </pre>
             </section>
         </section>
 

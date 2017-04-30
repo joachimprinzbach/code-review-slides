@@ -117,7 +117,7 @@
                     <li>Was einmal lief soll nicht wieder kaputt gehen</li>
                     <li>Testing ist Bestandteil professioneller Software Entwicklung</li>
                     <li>Ein Feature läuft nur dann, wenn es getestet ist</li>
-                    <li>manuelles Ausführen von repetitiven Tägigkeiten ist... </li>
+                    <li>manuelles Ausführen von repetitiven Tägigkeiten ist...</li>
                 </ul>
             </section>
             <section>
@@ -189,6 +189,7 @@
                         <img height="250" src="../img/agile.jpg">
                         <div>Agile Movement</div>
                     </div>
+                </div>
             </section>
             <section>
                 <h3>Was ist die grundlegende Vorgehensweise bei TDD?</h3>
@@ -253,7 +254,6 @@
             </section>
             <section>
                 <h3>Auschecken und dummyTest ausführen</h3>
-                <p>(Bild einfügen) -> welches Bild? xD</p>
             </section>
             <section>
                 <h3>Maven Projekt Struktur</h3>
@@ -478,19 +478,13 @@
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h1>(Un-) Testbarer Code</h1>
                 <h2><span></span>Der Umgang mit Dependencies<span></span></h2>
-            </section>
-
-            <section>
-                <h3>Untestable Code</h3>
-                <ul>
-                    <li>"And if your static utility methods can call to external services as well, that’s even
-                        better!"
-                    </li>
-                    <li><a href="http://misko.hevery.com/2008/07/24/how-to-write-3v1l-untestable-code/">How To Write
-                        3v1l, untestable Code</a></li>
-                </ul>
                 <aside class="notes">
                     <ul>
+                        <li>"And if your static utility methods can call to external services as well, that’s even
+                            better!"
+                        </li>
+                        <li><a href="http://misko.hevery.com/2008/07/24/how-to-write-3v1l-untestable-code/">How To Write
+                            3v1l, untestable Code</a></li>
                         <li>Es gibt unzählige Beispiele für schlechten Code, wir haben mal ein paar Beispiele rausgesucht.</li>
                         <li>Beispiel A: Create your own dependencies</li>
                         <li>Beispiel B: Das Validieren einer Note an in mehrere Methoden macht es schwieriger diese Methoden zu Testen und theoretisch müsste die Gültigkeit einer Note für jede Methode neu getestet werden.</li>
@@ -500,15 +494,20 @@
 
             <section>
                 <h3>Exkurs: Primitive Obsession</h3>
+                <ul>
+                    <li>Besessenheit von primitiven Typen</li>
+                    <li><span class="warn">Problem: </span>Viele Kleine Duplikationen und geringe Typ-Sicherheit</li>
+                    <li><span class="highlighted">Lösung: </span> Wrapper-Objekte für die primitiven Typen erstellen</li>
+                </ul>
             </section>
 
             <section>
                 <h3>Exkurs: Feature Envy</h3>
                 <ul>
                     <li>Feature Neid</li>
-                    <li><span class="warn">Warum schlecht?</span> Hohe Kopplung</li>
+                    <li><span class="warn">Problem</span> Hohe Kopplung</li>
                     <li>Feature Envy können auch auf Standard-Klassen wie String, Double, Integer, Collections etc. auftreten</li>
-                    <li><span class="hightlighted">Lösung:</span> Funktionalität an ein anderes, oder neues Objekt verschieben.</li>
+                    <li><span class="highlighted">Lösung:</span> Funktionalität an ein anderes, oder neues Objekt verschieben.</li>
                 </ul>
             </section>
             <section>
@@ -842,12 +841,12 @@
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Literatur Empfehlungen</h3>
                 <ul>
-                    <li>Frank Westphal: <span class="hightlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span>
+                    <li>Frank Westphal: <span class="highlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span>
                     </li>
-                    <li>Kent Beck: <span class="hightlighted">"Test Driven Development: By Example"</span></li>
-                    <li>Robert C. Martin: <span class="hightlighted">"Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code"</span>
+                    <li>Kent Beck: <span class="highlighted">"Test Driven Development: By Example"</span></li>
+                    <li>Robert C. Martin: <span class="highlighted">"Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code"</span>
                     </li>
-                    <li>Eric Evans: <span class="hightlighted">"Domain-Driven Design: Tackling Complexity in the Heart of Software"</span>
+                    <li>Eric Evans: <span class="highlighted">"Domain-Driven Design: Tackling Complexity in the Heart of Software"</span>
                     </li>
                 </ul>
             </section>

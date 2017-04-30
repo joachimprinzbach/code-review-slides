@@ -635,7 +635,39 @@
                 <ul>
                     <li>Dependencies können im Test ausgetauscht werden</li>
                     <li>Anstelle der echten Abhängigkeit, kann dem Object under Test eine Alternative untergejubelt werden</li>
-                    <li>Es gibt mehrere Formen solche Alternativen zu erstellen...</li>
+                    <li>Es gibt mehrere Formen solche Alternativen zu erstellen. Sie werden alle als <span class="code">Test Double</span> bezeichnet</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Dummy Object</h2>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                        public interface FileReader {
+                            String read(File file);
+                        }
+					</code>
+                    <code class="hljs java" data-trim contenteditable>
+                        @Test
+                        public void importCustomerData() {
+                            FileReader reader = new FileReader() {
+                                @Override
+                                public String read(File file) {
+                                    return null;
+                                }
+                            };
+                            new CustomerImport(reader);
+                            // ...
+                        }
+					</code>
+                </pre>
+            </section>
+            <section>
+                <h2>Dummy Object (2)</h2>
+                <ul>
+                    <li>ein möglichst einfaches Objekt als Parameter nutzen</li>
+                    <li>im einfachsten Fall <span class="code">null</span></li>
+                    <li>Wird ein Objekt benötigt, die simpelste Form der Implementierung des Interfaces wählen</li>
+                    <li>Dummies werden nicht aufgerufen, sie werden lediglich zur Erzeugung des getesteten Objektes benötigt</li>
                 </ul>
             </section>
         </section>

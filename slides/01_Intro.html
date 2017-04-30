@@ -426,6 +426,11 @@
             <section>
                 <h3>Exkurs: Erweiterung des TDD Cycles</h3>
                 <img src="../img/tdd_cycle.png">
+                <aside class="notes">
+                    <ul>
+                        <li>Beim Refactoring geht es um viele Clean Code Themen. Wir beschäftigen uns heute vorraning mit der Eliminierung von Duplikaten, der (Nicht)-Verwendung von Primitiven, Feature Envy und Depenedency Injection.</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h3>Exkurs: Erweiterung des TDD Cycles</h3>
@@ -476,7 +481,7 @@
             </section>
 
             <section>
-                <h2>Untestable Code</h2>
+                <h3>Untestable Code</h3>
                 <ul>
                     <li>"And if your static utility methods can call to external services as well, that’s even
                         better!"
@@ -484,7 +489,51 @@
                     <li><a href="http://misko.hevery.com/2008/07/24/how-to-write-3v1l-untestable-code/">How To Write
                         3v1l, untestable Code</a></li>
                 </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>Es gibt unzählige Beispiele für schlechten Code, wir haben mal ein paar Beispiele rausgesucht.</li>
+                        <li>Beispiel A: Create your own dependencies</li>
+                        <li>Beispiel B: Das Validieren einer Note an in mehrere Methoden macht es schwieriger diese Methoden zu Testen und theoretisch müsste die Gültigkeit einer Note für jede Methode neu getestet werden.</li>
+                    </ul>
+                </aside>
             </section>
+
+            <section>
+                <h3>Exkurs: Primitive Obsession</h3>
+            </section>
+
+            <section>
+                <h3>Exkurs: Feature Envy</h3>
+                <ul>
+                    <li>Feature Neid</li>
+                    <li><span class="warn">Warum schlecht?</span> Hohe Kopplung</li>
+                    <li>Feature Envy können auch auf Standard-Klassen wie String, Double, Integer, Collections etc. auftreten</li>
+                    <li><span class="hightlighted">Lösung:</span> Funktionalität an ein anderes, oder neues Objekt verschieben.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Exkurs: Feature Envy</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    public String convertToUsFormat(Grade grade){
+                        String internationalGrade = "";
+                        if (grade.getValue() >= 1.0 && grade.getValue() < 1.7) {
+                            internationalGrade = "A";
+                        } else if (grade.getValue() >= 1.7 && grade.getValue() < 2.7) {
+                            internationalGrade = "B";
+                        } else if (grade.getValue() >= 2.7 && grade.getValue() < 3.7) {
+                            internationalGrade = "C";
+                        } else if (grade.getValue() >= 3.7 && grade.getValue() <= 4.0) {
+                            internationalGrade = "D";
+                        } else if (grade.getValue() > 4) {
+                            internationalGrade = "F";
+                        }
+                        return internationalGrade;
+                    }
+                    </code>
+                </pre>
+            </section>
+
 
             <section>
                 <h2>Dependencies</h2>

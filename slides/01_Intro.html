@@ -245,7 +245,8 @@
                     <ul>
                         <li>Fake it: Eigenet sich für komplexere Lösungen und stellt trotzdem konstant sicher,
                             dass einfache Beispiele bei Anpassungen des Algorithmus noch passen. Zudem hat es auch einen psychologischen Effekt, da man trotz
-                        des komplexen Problems schnell einen grünen Balken hat.</li>
+                            des komplexen Problems schnell einen grünen Balken hat.
+                        </li>
                         <li>Fake It und Triangulation sind für kleinere Schritte geeignet Mit Obiviuos Implementation mache ich grössere Schritte.</li>
                         <li>Eine fixe Regel existiert nicht! Das Wichtigste ist den Zyklus kurz zu halten.</li>
                     </ul>
@@ -386,7 +387,7 @@
                     <li>Hat jemand Lust seine Lösung vorzustellen?</li>
                     <li>Wieviele Tests habt ihr geschrieben? Warum?</li>
                     <li>Wieviele <span class="code">Assert Statements</span> habt ihr in einer Testmethode? Warum?</li>
-                    <li>TDD Fanatiker Beispiel</li>
+                    <li>Für die nächste Runde überdenkt eure Namen erneut, und schaut ob ihr was ändern wollt.</li>
                 </ul>
             </section>
             <section>
@@ -450,28 +451,13 @@
                 <aside class="notes">
                     <ul>
                         <li>Beim Refactoring geht es um viele Clean Code Themen. Wir beschäftigen uns heute vorraning mit der Eliminierung von Duplikaten, der (Nicht)-Verwendung von Primitiven, Feature Envy und Depenedency Injection.</li>
+                        <li>Erstelle weitere Testfälle um ein Pattern zu erkennen</li>
+                        <li>Führe ein Refactoring durch wenn die Testfälle grün sind</li>
+                        <li><span class="warn">Hint:</span> Eventuell bietet es sich an, zusammenhängende Werte in einem Objekt zu kapseln</li>
                     </ul>
                 </aside>
             </section>
-            <section>
-                <h3>Exkurs: Erweiterung des TDD Cycles</h3>
-                <ul>
-                    <li>do it - refactor</li>
-                    <li>parallel change</li>
-                </ul>
-            </section>
-            <section>
-                <h3>4. Runde</h3>
-                <ul>
-                    <li>Starte mit einem Testfall für eine Note</li>
-                    <li>Erstelle weitere Testfälle um ein Pattern zu erkennen</li>
-                    <li>Löse die Anforderung so einfach wie möglich</li>
-                    <li>Führe ein Refactoring durch wenn die Testfälle grün sind</li>
-                    <li><span class="warn">Hint:</span> Eventuell bietet es sich an, zusammenhängende Werte in einem
-                        Objekt zu kapseln
-                    </li>
-                </ul>
-            </section>
+
             <section>
                 <h3>4. Runde (Recap)</h3>
                 <ul>
@@ -491,14 +477,56 @@
             </section>
             <section>
                 <h3>Exkurs: Test Coverage</h3>
-                <p>Hier noch Theorie</p>
+                <h4>Es wird zwischen unterschiedlichen Kennzahlen unterschieden:</h4>
+                <ul>
+                    <li>Class Coverage</li>
+                    <li>Method Coverage</li>
+                    <li>Line / Statement Coverage</li>
+                    <li>Branch / Decision Coverage</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Exkurs: Test Coverage</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    public class GradePrinter {
+                        public boolean isPassed(double grade) {
+                            return grade <= 4.0;
+                        }
+
+                        public void gradePrinter(double grade) {
+                            if (grade <= 4.0) {
+                                System.out.println("Passed!");
+                            }
+                            if (grade == 1.0) {
+                                System.out.println("CRAZY!");
+                            }
+                            System.out.println("Your grade is " + grade);
+                        }
+                    }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Exkurs: Test Coverage</h3>
+                <ul>
+                    <li><span class="warn">Vorsicht: </span>Eine hohe Testabdeckung weist nicht automatisch auf eine gute Qualität der Tests und der Applikation hin.</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>Es nicht sinnvoll alles zu testen.</li>
+                        <li></li>
+                    </ul>
+                </aside>
             </section>
         </section>
 
         <section>
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h1>(Un-) Testbarer Code</h1>
-                <h2><span></span>Der Umgang mit Dependencies<span></span></h2>
+                <h2></h2>
                 <aside class="notes">
                     <ul>
                         <li>"And if your static utility methods can call to external services as well, that’s even

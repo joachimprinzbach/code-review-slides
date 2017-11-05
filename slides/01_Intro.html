@@ -250,10 +250,13 @@
                 <aside class="notes">
                     <ul>
                         <li>Fake it: Eigenet sich für komplexere Lösungen und stellt trotzdem konstant sicher,
-                            dass einfache Beispiele bei Anpassungen des Algorithmus noch passen. Zudem hat es auch einen psychologischen Effekt, da man trotz
+                            dass einfache Beispiele bei Anpassungen des Algorithmus noch passen. Zudem hat es auch einen psychologischen
+                            Effekt, da man trotz
                             des komplexen Problems schnell einen grünen Balken hat.
                         </li>
-                        <li>Fake It und Triangulation sind für kleinere Schritte geeignet Mit Obiviuos Implementation mache ich grössere Schritte.</li>
+                        <li>Fake It und Triangulation sind für kleinere Schritte geeignet Mit Obiviuos Implementation mache ich grössere
+                            Schritte.
+                        </li>
                         <li>Eine fixe Regel existiert nicht! Das Wichtigste ist den Zyklus kurz zu halten.</li>
                     </ul>
                 </aside>
@@ -332,6 +335,7 @@
                     <li>Alle pro Klasse</li>
                     <li>ein einzelner Test</li>
                 </ul>
+                <p>-> jeweils alle Tests die mit <span class="code">@Test</span> annotiert sind</p>
             </section>
         </section>
 
@@ -343,10 +347,14 @@
             <section>
                 <h3>Anforderungen</h3>
                 <ul>
-                    <li>Der Calculator soll die Möglichkeitn bieten den Durchschnitt einer beliebigen Anzahl (Notenspiegel) von gewichteten Noten zu berechnen.Das Gewicht der Noten wir durch ECTS repräsentiert.</li>
+                    <li>Der Calculator soll die Möglichkeitn bieten den Durchschnitt einer beliebigen Anzahl (Notenspiegel) von gewichteten
+                        Noten zu berechnen.Das Gewicht der Noten wir durch ECTS repräsentiert.
+                    </li>
                     <li>Des Weiteren soll der Calculator den Durchschnitt über eine Menge von Notenspiegeln berechnen können.</li>
-                    <li><span class="warn">Vorsicht dieser Anforderungskatalog ist nicht zwingend vollständig bzw. bis ins letzte Detail ausformuliert.</span></li>
-                    <li><span class="warn">Wichtig:</span> TDD erfodert das selbständige Unterteilen von Anforderungen in kleine Häppchen</li>
+                    <li><span class="warn">Vorsicht dieser Anforderungskatalog ist nicht zwingend vollständig bzw. bis ins letzte Detail ausformuliert.</span>
+                    </li>
+                    <li><span class="warn">Wichtig:</span> TDD erfodert das selbständige Unterteilen von Anforderungen in kleine Häppchen
+                    </li>
                 </ul>
                 <aside class="notes">
                     <ul>
@@ -457,11 +465,14 @@
                             <li>Write the functional code until the test passes.</li>
                             <li>Refactor both new and old code to make it well structured.</li>
                         </ul>
-                        <li>Beim Refactoring geht es um viele Clean Code Themen. Wir beschäftigen uns heute vorraning mit der Eliminierung von Duplikaten, der (Nicht)-Verwendung von Primitiven, Feature Envy und Depenedency Injection.</li>
+                        <li>Beim Refactoring geht es um viele Clean Code Themen. Wir beschäftigen uns heute vorraning mit der Eliminierung
+                            von Duplikaten, der (Nicht)-Verwendung von Primitiven, Feature Envy und Depenedency Injection.
+                        </li>
                         <li>Refatcoring MAC Suche</li>
                         <li>Erstelle weitere Testfälle um ein Pattern zu erkennen</li>
                         <li>Führe ein Refactoring durch wenn die Testfälle grün sind</li>
-                        <li><span class="warn">Hint:</span> Eventuell bietet es sich an, zusammenhängende Werte in einem Objekt zu kapseln</li>
+                        <li><span class="warn">Hint:</span> Eventuell bietet es sich an, zusammenhängende Werte in einem Objekt zu kapseln
+                        </li>
 
                     </ul>
                 </aside>
@@ -510,7 +521,9 @@
                 </pre>
                 <aside class="notes">
                     <ul>
-                        <li><span class="warn">Vorsicht: </span>Eine hohe Testabdeckung weist nicht automatisch auf eine gute Qualität der Tests und der Applikation hin.</li>
+                        <li><span class="warn">Vorsicht: </span>Eine hohe Testabdeckung weist nicht automatisch auf eine gute Qualität der
+                            Tests und der Applikation hin.
+                        </li>
                     </ul>
 
                 </aside>
@@ -595,7 +608,9 @@
                             3v1l, untestable Code</a></li>
                         <li>Es gibt unzählige Beispiele für schlechten Code, wir haben mal ein paar Beispiele rausgesucht.</li>
                         <li>Beispiel A: Create your own dependencies</li>
-                        <li>Beispiel B: Das Validieren einer Note an in mehrere Methoden macht es schwieriger diese Methoden zu Testen und theoretisch müsste die Gültigkeit einer Note für jede Methode neu getestet werden.</li>
+                        <li>Beispiel B: Das Validieren einer Note an in mehrere Methoden macht es schwieriger diese Methoden zu Testen und
+                            theoretisch müsste die Gültigkeit einer Note für jede Methode neu getestet werden.
+                        </li>
                     </ul>
                 </aside>
             </section>
@@ -867,7 +882,9 @@
                     <li>Tests mit Mock-Unterstützung sind langsamer</li>
                     <li>Die Lesbarkeit kann schnell leiden</li>
                     <li>Objekte die einfach zu erstellen und zu kontrollieren sind sollten nicht gemocked werden</li>
-                    <li>Mocking bietet sich vor allem für Abhängigkeiten an, die auf das Dateisystem, die Datenbank oder andere Systeme zugreifen</li>
+                    <li>Mocking bietet sich vor allem für Abhängigkeiten an, die auf das Dateisystem, die Datenbank oder andere Systeme
+                        zugreifen
+                    </li>
                 </ul>
             </section>
         </section>
@@ -917,7 +934,8 @@
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Literatur Empfehlungen</h3>
                 <ul>
-                    <li>Frank Westphal: <span class="highlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span>
+                    <li>Frank Westphal: <span
+                            class="highlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span>
                     </li>
                     <li>Kent Beck: <span class="highlighted">"Test Driven Development: By Example"</span></li>
                     <li>Robert C. Martin: <span class="highlighted">"Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code"</span>

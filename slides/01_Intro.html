@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>TDD@HFU</title>
+    <title>reveal.js</title>
 
     <link rel="stylesheet" href="../css/reveal.css">
     <link rel="stylesheet" href="../css/theme/tdd.css">
@@ -342,53 +342,28 @@
         <section>
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h1>Projektvorstellung</h1>
-                <h2><span></span>Address Validation<span></span></h2>
+                <h2><span></span>Grade Calculator<span></span></h2>
             </section>
             <section>
-                <h3>Anforderungen (1)</h3>
+                <h3>Anforderungen</h3>
                 <ul>
-                    <li>Wir bauen ein Software zur Verwaltung von Studierenden. Die erste Funktionalität dieser Software soll die Erfassung der Adressen aller Studierenden sein.
-                        Hierbei ist es wichtig, dass die Software den Anwender bei der korrekten Eingabe von Adressen unterstützt.
+                    <li>Der Calculator soll die Möglichkeitn bieten den Durchschnitt einer beliebigen Anzahl (Notenspiegel) von gewichteten
+                        Noten zu berechnen.Das Gewicht der Noten wir durch ECTS repräsentiert.
                     </li>
-                </ul>
-            </section>
-            <section>
-                <h3>Anforderungen (2)</h3>
-                <ul>
-                    <li>Eine Adresse in der neuen Verwaltungssoftware besteht aus den folgenden Bestandteilen: </li>
-                    <ul style="font-size: 70%">
-                        <li>Vor- und Nachname</li>
-                        <li>Strasse und Hausnummer ODER Postfach</li>
-                        <li>PLZ Ort</li>
-                        <li>Land</li>
-                        <li>Telefonnummer</li>
-                        <li>E-Mail-Adresse</li>
-                    </ul>
-                </ul>
-            </section>
-            <section>
-                <h3>Anforderungen (3)</h3>
-                <ul>
-                    <li>
-                        Eine Adresse ist dann gültig wenn die folgenden Regeln beachtet werden:
-                        <ul style="font-size: 70%">
-                            <li>Alle Felder ausser Telefonnummer sind Pflichtfelder</li>
-                            <li>Vor- und Nachname müssen jeweils mit Grossbuchstaben beginnen.</li>
-                            <li>Strasse und Hausnummer ODER das Postfach müssen gesetzt sein.</li>
-                            <li>Die E-Mail-Adresse muss den Regeln aus RFC 5322 entsprechen.</li>
-                            <li>Das Land kann in der ersten Version der Software nur Deutschland oder Schweiz sein.</li>
-                            <li>Die Postleitzahl muss den jewiligen Länder-spezifischen Anforderungen gerecht werden.</li>
-                        </ul>
-                </ul>
-            </section>
-            <section>
-                <h3>Anforderungen (4)</h3>
-                <ul>
+                    <li>Des Weiteren soll der Calculator den Durchschnitt über eine Menge von Notenspiegeln berechnen können.</li>
                     <li><span class="warn">Vorsicht dieser Anforderungskatalog ist nicht zwingend vollständig bzw. bis ins letzte Detail ausformuliert.</span>
                     </li>
                     <li><span class="warn">Wichtig:</span> TDD erfodert das selbständige Unterteilen von Anforderungen in kleine Häppchen
                     </li>
                 </ul>
+                <aside class="notes">
+                    <ul>
+                        <li>Restriktionen für ECTS und Noten werden bewusst nicht angegeben.</li>
+                        <li>Es dürfen nur gültige Noten die an der HFU bekannt sind in den Rechner reingegeben werden.</li>
+                        <li>Stelle sicher, dass nur ganzzahlige Credit Points zwischen 1 und 60 ausgewählt werden können</li>
+                        <li>Für heute gehen wir davon aus, dass Noten dann gültig sind wenn sie >= 1.0 und kleiner gleich 5.0 sind</li>
+                    </ul>
+                </aside>
             </section>
             <section>
                 <h3>Test Case Brainstorming</h3>
@@ -436,10 +411,10 @@
                 <h4>Welches Naming findet ihr am sinnvollsten?</h4>
                 <ul>
                     <li>testCalc1</li>
-                    <li>validInput_validateAddress_returnsValidAddress</li>
-                    <li>validateStudentsAddress</li>
-                    <li>testValidationForOneAddressAndReturnAValidatedAddress</li>
-                    <li>test_validate_address</li>
+                    <li>oneGrade_calculateAverage_returnsInputGrade</li>
+                    <li>calculateAverageOfOneGrade</li>
+                    <li>testAverageCalculationForOneGradeAndShouldReturnTheAverageOfThatGrade</li>
+                    <li>test_calculate_oneGrade</li>
                 </ul>
             </section>
             <section>

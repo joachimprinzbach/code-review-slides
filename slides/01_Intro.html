@@ -117,7 +117,8 @@
             </section>
             <section>
                 <h3>L A N G W E I L I G</h3>
-                <img src="../img/boah-watt-is-datt-langweilig-daec37f6-484a-4e5c-aa3a-2d19d0ffd42d.jpg" alt="" width="55%">
+                <img src="../img/boah-watt-is-datt-langweilig-daec37f6-484a-4e5c-aa3a-2d19d0ffd42d.jpg" alt=""
+                     width="55%">
             </section>
             <section>
                 <h3>Diskussion - Testing spart Geld</h3>
@@ -129,7 +130,9 @@
                     <li>Wartung durch andere Teams -> nicht die ursprünglichen Entwickler</li>
                     <li>Bugfixing führt oftmals zu neuen Bugs</li>
                     <li>Debugging ist mühsam und zeitaufwendig</li>
-                    <li>Der gesamte Prozess (Melden, Erfassen, Priorisieren, Retesten, Deployment...) ist sehr aufwendig</li>
+                    <li>Der gesamte Prozess (Melden, Erfassen, Priorisieren, Retesten, Deployment...) ist sehr
+                        aufwendig
+                    </li>
                 </ul>
             </section>
             <section>
@@ -207,54 +210,45 @@
                 <h3>Was ist die grundlegende Vorgehensweise bei TDD?</h3>
             </section>
             <section>
+                <h3>?</h3>
+            </section>
+            <section>
                 <h3>Write tests first!</h3>
             </section>
             <section>
-                <img src="../img/whaaat.gif">
-            </section>
-            <section>
-                <h3>Aber ich habe doch noch <span style="font-weight: bold;">keine</span> Klassen oder Methoden oder sonst irgendwas. </h3>
-                <h3>Arbeite ich mit diesen ganzen rot unterstrichenen Dingen in meiner IDE?</h3>
+                <h3>Aber ich habe doch noch <span style="font-weight: bold;">keine</span> Klassen oder Methoden oder
+                    sonst irgendwas...</h3>
             </section>
             <section>
                 <img src="../img/yes2.gif">
             </section>
             <section>
-                <h3>Und warum mache ich sowas?</h3>
-                <div style="display: flex;">
-                    <div style="flex: 1;">
-                        <img height="160" src="../img/fastfeedback.png">
-                        <div>Fast Feedback</div>
-                    </div>
-                    <div style="flex: 1;">
-                        <img height="160" src="../img/CodeIsBad.png">
-                        <div>No bad code</div>
-                    </div>
-                    <div style="flex: 1">
-                        <img height="160" src="../img/havingfun.jpg">
-                        <div>It's fun!</div>
-                    </div>
-                </div>
+                <h3>Und wie soll das gehen?</h3>
             </section>
             <section>
                 <h3>Vereinfachter TDD Cycle</h3>
+
                 <img src="../img/simple_tdd_cycle.png">
+
             </section>
             <section>
-                <h3>Drei Möglichkeiten um "grün" zu werden</h3>
+                <h3>Und wie mache ich einen Test "grün"?</h3>
                 <ul>
                     <li>Fake it</li>
                     <li>Implementiere das Offensichtliche</li>
                     <li>Triangulation</li>
                 </ul>
                 <aside class="notes">
+                    An der Tafel festhalten
                     <ul>
                         <li>Fake it: Eigenet sich für komplexere Lösungen und stellt trotzdem konstant sicher,
-                            dass einfache Beispiele bei Anpassungen des Algorithmus noch passen. Zudem hat es auch einen psychologischen
+                            dass einfache Beispiele bei Anpassungen des Algorithmus noch passen. Zudem hat es auch einen
+                            psychologischen
                             Effekt, da man trotz
                             des komplexen Problems schnell einen grünen Balken hat.
                         </li>
-                        <li>Fake It und Triangulation sind für kleinere Schritte geeignet Mit Obiviuos Implementation mache ich grössere
+                        <li>Fake It und Triangulation sind für kleinere Schritte geeignet Mit Obiviuos Implementation
+                            mache ich grössere
                             Schritte.
                         </li>
                         <li>Eine fixe Regel existiert nicht! Das Wichtigste ist den Zyklus kurz zu halten.</li>
@@ -262,13 +256,41 @@
                 </aside>
             </section>
             <section>
-                <h3>Beginne so simpel wie möglich!</h3>
+                <h3>Und wozu eigentlich das Ganze?</h3>
+                <div style="display: flex;">
+                    <div style="flex: 1;">
+                        <img height="140" src="../img/fastfeedback.png">
+                        <div>Fast Feedback</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <img height="140" src="../img/catlion.png">
+                        <div>Confidence</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <img height="140" src="../img/CodeIsBad.png">
+                        <div>No bad code</div>
+                    </div>
+                    <div style="flex: 1">
+                        <img height="140" src="../img/havingfun.jpg">
+                        <div>It's fun!</div>
+                    </div>
+                </div>
+                <aside class="notes">
+                </aside>
+            </section>
+            <section>
+                <h3>Und hier noch ein paar Tipps!</h3>
                 <ul>
                     <li>Schreibe keinen Code für Anforderungen, die irgendwann mal auftauchen könnten</li>
                     <li><b>Löse dich davon, die Implementation vorauszuahnen</b></li>
-                    <li>In erster Linie geht es darum den Test grün zu bekommen (red / green cycle)</li>
+                    <li>In erster Linie geht es darum den Test grün zu bekommen (Rot-Grün-Zyklus)</li>
+                    <li>Halte die Rot-Grün-Zyklen möglichst kurz</li>
                 </ul>
+                <aside class="notes">
+                    Ganz wichtig. Werden wir nachher sehen
+                </aside>
             </section>
+
         </section>
 
         <section>
@@ -312,7 +334,8 @@
             <section>
                 <h3>@Test</h3>
                 <ul>
-                    <li>seit JUnit4 werden Test-Methoden mit der <span class="code">@Test</span> Annotation versehen</li>
+                    <li>seit JUnit4 werden Test-Methoden mit der <span class="code">@Test</span> Annotation versehen
+                    </li>
                     <li>die mit <span class="code">@Test</span> annotierten Methoden müssen <span class="code">public void</span>
                         sein
                     </li>
@@ -347,21 +370,30 @@
             <section>
                 <h3>Anforderungen</h3>
                 <ul>
-                    <li>Der Calculator soll die Möglichkeitn bieten den Durchschnitt einer beliebigen Anzahl (Notenspiegel) von gewichteten
+                    <li>Der Calculator soll die Möglichkeitn bieten den Durchschnitt einer beliebigen Anzahl
+                        (Notenspiegel) von gewichteten
                         Noten zu berechnen.Das Gewicht der Noten wir durch ECTS repräsentiert.
                     </li>
-                    <li>Des Weiteren soll es möglich sein die Durchschnittsnote auch im US-Letter-Grade-Format auszugeben.</li>
+                    <li>Des Weiteren soll es möglich sein die Durchschnittsnote auch im US-Letter-Grade-Format
+                        auszugeben.
+                    </li>
                     <li><span class="warn">Vorsicht dieser Anforderungskatalog ist nicht zwingend vollständig bzw. bis ins letzte Detail ausformuliert.</span>
                     </li>
-                    <li><span class="warn">Wichtig:</span> TDD erfodert das selbständige Unterteilen von Anforderungen in kleine Häppchen
+                    <li><span class="warn">Wichtig:</span> TDD erfodert das selbständige Unterteilen von Anforderungen
+                        in kleine Häppchen
                     </li>
                 </ul>
                 <aside class="notes">
                     <ul>
                         <li>Restriktionen für ECTS und Noten werden bewusst nicht angegeben.</li>
-                        <li>Es dürfen nur gültige Noten die an der HFU bekannt sind in den Rechner reingegeben werden.</li>
-                        <li>Stelle sicher, dass nur ganzzahlige Credit Points zwischen 1 und 60 ausgewählt werden können</li>
-                        <li>Für heute gehen wir davon aus, dass Noten dann gültig sind wenn sie >= 1.0 und kleiner gleich 5.0 sind</li>
+                        <li>Es dürfen nur gültige Noten die an der HFU bekannt sind in den Rechner reingegeben werden.
+                        </li>
+                        <li>Stelle sicher, dass nur ganzzahlige Credit Points zwischen 1 und 60 ausgewählt werden
+                            können
+                        </li>
+                        <li>Für heute gehen wir davon aus, dass Noten dann gültig sind wenn sie >= 1.0 und kleiner
+                            gleich 5.0 sind
+                        </li>
                     </ul>
                 </aside>
             </section>
@@ -375,7 +407,9 @@
                 <h3>Ein paar Hinweise</h3>
                 <ul>
                     <li>Überprüft eure Vermutungen mit Assertions</li>
-                    <li>Überlege dir einen sinnvollen Namen für die Testmethode(n), starte mit möglichst einfachen Testfällen</li>
+                    <li>Überlege dir einen sinnvollen Namen für die Testmethode(n), starte mit möglichst einfachen
+                        Testfällen
+                    </li>
                 </ul>
                 <pre>
                     <code class="hljs java" data-trim contenteditable>
@@ -465,13 +499,16 @@
                             <li>Write the functional code until the test passes.</li>
                             <li>Refactor both new and old code to make it well structured.</li>
                         </ul>
-                        <li>Beim Refactoring geht es um viele Clean Code Themen. Wir beschäftigen uns heute vorraning mit der Eliminierung
-                            von Duplikaten, der (Nicht)-Verwendung von Primitiven, Feature Envy und Depenedency Injection.
+                        <li>Beim Refactoring geht es um viele Clean Code Themen. Wir beschäftigen uns heute vorraning
+                            mit der Eliminierung
+                            von Duplikaten, der (Nicht)-Verwendung von Primitiven, Feature Envy und Depenedency
+                            Injection.
                         </li>
                         <li>Refatcoring MAC Suche</li>
                         <li>Erstelle weitere Testfälle um ein Pattern zu erkennen</li>
                         <li>Führe ein Refactoring durch wenn die Testfälle grün sind</li>
-                        <li><span class="warn">Hint:</span> Eventuell bietet es sich an, zusammenhängende Werte in einem Objekt zu kapseln
+                        <li><span class="warn">Hint:</span> Eventuell bietet es sich an, zusammenhängende Werte in einem
+                            Objekt zu kapseln
                         </li>
 
                     </ul>
@@ -521,7 +558,8 @@
                 </pre>
                 <aside class="notes">
                     <ul>
-                        <li><span class="warn">Vorsicht: </span>Eine hohe Testabdeckung weist nicht automatisch auf eine gute Qualität der
+                        <li><span class="warn">Vorsicht: </span>Eine hohe Testabdeckung weist nicht automatisch auf eine
+                            gute Qualität der
                             Tests und der Applikation hin.
                         </li>
                     </ul>
@@ -534,7 +572,8 @@
                 <ul>
                     <li>Besessenheit von primitiven Typen</li>
                     <li><span class="warn">Problem: </span>Viele Kleine Duplikationen und geringe Typ-Sicherheit</li>
-                    <li><span class="highlighted">Lösung: </span> Wrapper-Objekte für die primitiven Typen erstellen</li>
+                    <li><span class="highlighted">Lösung: </span> Wrapper-Objekte für die primitiven Typen erstellen
+                    </li>
                 </ul>
             </section>
 
@@ -548,8 +587,12 @@
                 <ul>
                     <li>Feature Neid</li>
                     <li><span class="warn">Problem</span> Hohe Kopplung</li>
-                    <li>Feature Envy können auch auf Standard-Klassen wie String, Double, Integer, Collections etc. auftreten</li>
-                    <li><span class="highlighted">Lösung:</span> Funktionalität an ein anderes, oder neues Objekt verschieben.</li>
+                    <li>Feature Envy können auch auf Standard-Klassen wie String, Double, Integer, Collections etc.
+                        auftreten
+                    </li>
+                    <li><span class="highlighted">Lösung:</span> Funktionalität an ein anderes, oder neues Objekt
+                        verschieben.
+                    </li>
                 </ul>
             </section>
             <section>
@@ -606,9 +649,12 @@
                         </li>
                         <li><a href="http://misko.hevery.com/2008/07/24/how-to-write-3v1l-untestable-code/">How To Write
                             3v1l, untestable Code</a></li>
-                        <li>Es gibt unzählige Beispiele für schlechten Code, wir haben mal ein paar Beispiele rausgesucht.</li>
+                        <li>Es gibt unzählige Beispiele für schlechten Code, wir haben mal ein paar Beispiele
+                            rausgesucht.
+                        </li>
                         <li>Beispiel A: Create your own dependencies</li>
-                        <li>Beispiel B: Das Validieren einer Note an in mehrere Methoden macht es schwieriger diese Methoden zu Testen und
+                        <li>Beispiel B: Das Validieren einer Note an in mehrere Methoden macht es schwieriger diese
+                            Methoden zu Testen und
                             theoretisch müsste die Gültigkeit einer Note für jede Methode neu getestet werden.
                         </li>
                     </ul>
@@ -844,7 +890,8 @@
                     <li>es kann eine Vielzahl von Überprüfungen auf dem Mock vorgenommen werden</li>
                     <li>Für das Mocking ist ein Framework notwendig</li>
                     <li>Für Java gibt es <a href="http://site.mockito.org/">Mockito</a>, <a href="http://easymock.org/">EasyMock</a>,
-                        <a href="http://jmockit.org/">JMockit</a> und <a href="http://powermock.github.io/">PowerMock</a></li>
+                        <a href="http://jmockit.org/">JMockit</a> und <a
+                                href="http://powermock.github.io/">PowerMock</a></li>
                 </ul>
             </section>
             <section>
@@ -882,7 +929,8 @@
                     <li>Tests mit Mock-Unterstützung sind langsamer</li>
                     <li>Die Lesbarkeit kann schnell leiden</li>
                     <li>Objekte die einfach zu erstellen und zu kontrollieren sind sollten nicht gemocked werden</li>
-                    <li>Mocking bietet sich vor allem für Abhängigkeiten an, die auf das Dateisystem, die Datenbank oder andere Systeme
+                    <li>Mocking bietet sich vor allem für Abhängigkeiten an, die auf das Dateisystem, die Datenbank oder
+                        andere Systeme
                         zugreifen
                     </li>
                 </ul>
@@ -936,12 +984,15 @@
                 <h3>Literatur Empfehlungen</h3>
                 <ul>
                     <li>Frank Westphal: <span
-                            class="highlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span></li>
+                            class="highlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span>
+                    </li>
                     <li>Kent Beck: <span class="highlighted">"Test Driven Development: By Example"</span></li>
                     <li>Robert C. Martin: <span class="highlighted">"Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code"</span>
                     </li>
-                    <li>Eric Evans: <span class="highlighted">"Domain-Driven Design: Tackling Complexity in the Heart of Software"</span></li>
-                    <li>Martin Fowler <span class="highlighted">"Refactoring: Improving the Design of Existing Code"</span></li>
+                    <li>Eric Evans: <span class="highlighted">"Domain-Driven Design: Tackling Complexity in the Heart of Software"</span>
+                    </li>
+                    <li>Martin Fowler <span
+                            class="highlighted">"Refactoring: Improving the Design of Existing Code"</span></li>
                 </ul>
             </section>
             <section>

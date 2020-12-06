@@ -93,24 +93,26 @@
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Code Reviews</h3>
                 <ul>
-                    <li>Was ist das eigentlich und warum sollte ich das tun?</li>
-                    <li>Und wie macht man das?</li>
-                    <li>Gibt's Tools dafür?</li>
-                    <li>Und was ist eigentlich ein Pull Request?</li>
+                    <li>Was ist das und warum sollte ich das tun?</li>
+                    <li>Wie macht man das und was ist eigentlich ein Pull Request?</li>
+                    <li>Gibt es Unterstützung durch Tools?</li>
                     <li>Best Practices</li>
                 </ul>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
-                <h1>Warum</h1>
+                <h1>Was, Wieso</h1>
                 <h2><span></span>Code Reviews<span></span></h2>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
-                <h3>Qualität</h3>
+                <h3>Was ist ein Code Review?</h3>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Qualität / Clean Code</h3>
                 <ul>
                     <li>Konsistenz: Namen, Style, Abstraktionen</li>
-                    <li>Fehler möglichst früh finden: Auch Security, Threading Probleme</li>
                     <li>Gutes Design, ausreichend Tests</li>
-                    <li>Anforderungen komplett umgesetzt</li>
+                    <li>Fehler möglichst früh finden: Auch Security oder Threading Probleme</li>
+                    <li>Anforderungen sind korrekt umgesetzt</li>
                     <li>Psychologischer Effekt des Reviews: Wenn man weiss, dass es jemand anschaut...</li>
                 </ul>
             </section>
@@ -120,41 +122,58 @@
                     <li>Fördert Kommunikation und Austausch</li>
                     <li>Vier Augen Prinzip</li>
                     <li>Mindestens 2 Entwickler kennen jede Code Stelle</li>
+                    <li>Lesen von Code dient der Weiterbildung</li>
                 </ul>
             </section>
+
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>How to Code Review</h3>
+                <ul>
+                    <li>gemeinsam an einem PC / über Video</li>
+                    <li>Code auschecken und selbst lesen</li>
+                    <li>mit Hilfe von Tools -> PullRequest</li>
+                </ul>
+            </section>
+
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>How to Pull Request</h3>
+                <img src="img/prs.png">
+                <a href="https://github.com/angular/angular/pull/39146">Example PullRequest</a>
+            </section>
+
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h1>Tooling</h1>
                 <h2><span></span>Nützliche Helferlein<span></span></h2>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Code Review</h3>
-                <h4>die folgenden GIT Server können wir empfehlen</h4>
+                <h4>die folgenden Git Server mit tollem PullRequest und Code Review Support können wir empfehlen</h4>
                 <ul>
                     <li>GitHub</li>
-                    <li>Bitbucket</li>
                     <li>Gitlab</li>
+                    <li>Bitbucket</li>
                 </ul>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
-                <h3>CI / CD</h3>
+                <h3>Automation</h3>
                 <ul>
-                    <li>GitHub Actions</li>
-                    <li>Jenkins</li>
-                    <li>Gitlab CI/CD</li>
-                </ul>
-            </section>
-            <section class="sub-section-slide" data-background="#E5F3F9">
-                <h3>Static Code Analysis / Checks</h3>
-                <ul>
-                    <li>Sonarqube</li>
-                    <li>Nexus IQ Server</li>
+                    <li>Static Code Analysis (Sonarqube, ESLint, ArchUnit)</li>
+                    <li>Security Checks (Nexus IQ Server, XRay, Checkmarx, Clair)</li>
+                    <li>Code Formatting (your IDE, prettier)</li>
+                    <li>Testing (JUnit, Cypress.io, Selenium, Karma)</li>
+                    <li>Architecture Checks (ArchUnit, JDepend)</li>
+                    <li>Continuous Integration (Jenkins, Gitlab CI, Travis, Circle CI)</li>
                 </ul>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Best Practices</h3>
                 <ul>
-                    <li>Was geht über Automatisierung abdecken</li>
-                    <li>Reviews "erwingen"</li>
+                    <li>Immer wertschätzend bleiben!</li>
+                    <li>Automatisieren wo möglich.</li>
+                    <li>mit Review von Tests starten -> zeigen die Verwendung.</li>
+                    <li>Reviews "erzwingen" -> keine Änderungen ohne abgenommenen PullRequest.</li>
+                    <li>Ihr dürft auch Lob verteilen.</li>
+                    <li>Pairing ist ebenfalls ein tolles Code Review Instrument.</li>
                 </ul>
             </section>
         </section>
@@ -165,6 +184,109 @@
                 <h1>Code Reviews</h1>
                 <h2><span></span>Übung und Demo<span></span></h2>
             </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Beispiel 1</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    public void printAge(String age) {
+                        if (Integer.parseInt(age) > 0) {
+                            System.out.println(age);
+                        }
+                    }
+
+                    public void printAgeInMonths(String age) {
+                        if (Integer.parseInt(age) > 0) {
+                            System.out.println(12 * age);
+                        }
+                    }
+                    </code>
+                </pre>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Beispiel 2</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    public void shipItem(Item item) {
+                        sendItem(3, item);
+                    }
+
+                    public void shipItemWithExpress(Item item) {
+                        sendItem(1, item);
+                    }
+                    </code>
+                </pre>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Beispiel 3</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    public void shipIt(Item item) {
+                        sendItem(STANDARD_SHIPPING_TIME_IN_DAYS, item);
+                    }
+
+                    public void shipIt2(Item item) {
+                        sendItem(EXPRESS_SHIPPING_TIME_IN_DAYS, item);
+                    }
+                    </code>
+                </pre>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Beispiel 4</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    /** constructor */
+                    public ShoppingCart() {
+
+                    }
+
+                    /**
+                     * sets the items
+                     * @param items the items
+                     */
+                    public void setItems(Items items) {
+                        this.items = items;
+                    }
+                    </code>
+                </pre>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Beispiel 5</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    // ...
+
+                    // adds an item to the shoppingCart
+                    ShoppingCart cart = getShoppingCart(customerNr);
+                    cart.addItem(item);
+                    cart.save();
+
+                    // ...
+                    </code>
+                </pre>
+            </section>
+
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Beispiel 6</h3>
+                <h4><a href="https://github.com/ugly-code/Durchschnittsnotenberechnung/blob/master/src/parser/WebsiteParser.java#L47-L92">Example on GitHub</a></h4>
+            </section>
+
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Beispiel 7</h3>
+                <pre>
+                    <code class="hljs java" data-trim contenteditable>
+                    ShoppingCart cart = getShoppingCart(customerNr);
+                    cart.addItem(item); 
+                    
+                    int newTotalPrice = 0;
+                    for (Item item: cart.getItems()) {
+                        newTotalPrice += item.getAmount() * item.getPrice();
+                    }
+
+                    int discount = calculateQuantityDiscount(newTotalPrice);
+                    </code>
+                </pre>
+            </section>
+
         </section>
 
 
@@ -172,15 +294,6 @@
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h1>Code Reviews</h1>
                 <h2><span></span>Wrap Up<span></span></h2>
-            </section>
-            <section class="sub-section-slide" data-background="#E5F3F9">
-                <h3>Ein paar Gedanken zu Code Reviews</h3>
-                <ul>
-                    <li>Immer wertschätzend bleiben!</li>
-                    <li>Ihr dürft auch Lob verteilen.</li>
-                    <li>Automatisiert wo möglich.</li>
-                    <li>Pairing ist ebenfalls ein tolles Code Review Instrument.</li>
-                </ul>
             </section>
             <section class="sub-section-slide" data-background="#E5F3F9">
                 <h3>Gute Online Quellen zum Nachschlagen</h3>

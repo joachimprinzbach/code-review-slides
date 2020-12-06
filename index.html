@@ -1,2 +1,187 @@
-<p><a href="slides/01_Intro.html">01 Intro</a></p>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/tdd.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/atom-one-dark.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Code Reviews</h1>
+            <h3>Software Qualität in der Praxis</h3>
+        </section>
+        <section class="about-slide">
+            <h2>Über uns</h2>
+            <div>
+                <div class="about">
+                    <img class="profile" width="250" height="250" alt="Marius" src="img/marius.png">
+                    <h3>Marius Reusch</h3>
+                    <h3><a href="">Software Engineer @ Swisscom</a></h3>
+                    <img height="90px" src="img/Swisscom-Logo.png">
+                </div>
+                <div class="about">
+                    <img class="profile" width="250" height="250" alt="Joachim" src="img/joachim.jpg">
+                    <h3>Joachim Prinzbach</h3>
+                    <h3><a href="">Software Engineer @ Baloise</a></h3>
+                    <img height="90px" src="img/baloise.png">
+                </div>
+            </div>
+        </section>
+        <section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h2><span></span>Einstieg als<span></span></h2>
+                <h1>Software Engineer</h1>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Share Knowledge</h1>
+                <h2><span></span>es bringt dich selbst weiter<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Häufiges Feedback</h1>
+                <h2><span></span>Von anderen, für andere<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Team</h1>
+                <h2><span></span>toll ein anderer...<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>mut</h1>
+                <h2><span></span>ausprobieren & experimentieren<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Durst</h1>
+                <h2><span></span>nach Wissen<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Agile</h1>
+                <h2><span></span>Scrum und so<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>CI / CD</h1>
+                <h2><span></span>Alles automatisiert - und continuous<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Qualität</h1>
+                <h2><span></span>Clean Code, Refactoring & Code Reviews<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Testing</h1>
+                <h2><span></span>und vor allem: TDD<span></span></h2>
+            </section>
+            <section>
+                <h2>Recap</h2>
+                <ul>
+                    <li>Automatisierung</li>
+                    <li>Pairing und Teamwork</li>
+                    <li>Tools im Griff haben</li>
+                    <li>Testing</li>
+                    <li>sich weiterentwickeln</li>
+                </ul>
+            </section>
+        </section>
+
+
+        <section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h1>Wrap Up</h1>
+                <h2><span></span>Code Reviews<span></span></h2>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Ein paar Gedanken zu Code Reviews</h3>
+                <ul>
+                    <li>Immer wertschätzend bleiben!</li>
+                    <li>Ihr dürft auch Lob verteilen.</li>
+                    <li>Automatisiert wo möglich.</li>
+                    <li>Pairing ist ebenfalls ein tolles Code Review Instrument.</li>
+                </ul>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Gute Quellen zum Nachschlagen</h3>
+                <ul>
+                    <li><a href="https://sourcemaking.com/refactoring">Code Smells and Refactoring Techniques</a></li>
+                </ul>
+            </section>
+            <section class="sub-section-slide" data-background="#E5F3F9">
+                <h3>Literatur Empfehlungen</h3>
+                <ul>
+                    <li>Frank Westphal: <span
+                            class="highlighted">"Testgetriebene Entwickung mit JUnit & FIT: Wie Software änderbar bleibt"</span>
+                    </li>
+                    <li>Kent Beck: <span class="highlighted">"Test Driven Development: By Example"</span></li>
+                    <li>Robert C. Martin: <span class="highlighted">"Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code"</span>
+                    </li>
+                    <li>Eric Evans: <span class="highlighted">"Domain-Driven Design: Tackling Complexity in the Heart of Software"</span>
+                    </li>
+                    <li>Martin Fowler <span
+                            class="highlighted">"Refactoring: Improving the Design of Existing Code"</span></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Contact</h3>
+                <ul>
+                    <li>Joachim Prinzbach</li>
+                    <ul>
+                        <li><a href="mailto:joachim.prinzbach@gmail.com">joachim.prinzbach@gmail.com</a></li>
+                        <li><a href="https://www.xing.com/profile/Joachim_Prinzbach">XING</a></li>
+                    </ul>
+                    <li>Marius Reusch</li>
+                    <ul>
+                        <li><a href="mailto:marius.reusch@gmail.com">marius.reusch@gmail.com</a></li>
+                        <li><a href="https://www.xing.com/profile/Marius_Reusch">XING</a></li>
+                    </ul>
+                </ul>
+            </section>
+        </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+        pubnubRemoteControl: {
+            subscribeKey: 'sub-c-2e12c108-13db-11e7-aca9-02ee2ddab7fe',
+            publishKey: 'pub-c-59089c7e-6675-454c-9fc4-32a1ecdfad51',
+            inputChannel: 'input',
+            outputChannel: 'output'
+        },
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'https://cdn.pubnub.com/sdk/javascript/pubnub.4.4.0.min.js', async: true},
+            {src: 'plugin/pubnub-remote-control/pubnub-remote-control.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>

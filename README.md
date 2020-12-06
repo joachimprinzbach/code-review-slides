@@ -1,8 +1,8 @@
 # TDD - Slides
 
-## Kontaktdaten
-- [Kontakt](https://hfu-tdd.github.io/tdd-slides/slides/01_Intro.html#/8/5)
+## Contact us
+- [Contact](https://joachimprinzbach.github.io/code-review-slides/#/3/4)
 
-## Inhalt
-- [01 Intro](https://hfu-tdd.github.io/tdd-slides/slides/01_Intro.html)
+## Content
+- [Slides](https://joachimprinzbach.github.io/code-review-slides/)
 

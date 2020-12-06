@@ -1,4 +1,4 @@
-# TDD - Slides
+# Code Review - Slides
 
 ## Contact us
 - [Contact](https://joachimprinzbach.github.io/code-review-slides/#/3/4)
